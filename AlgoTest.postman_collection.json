@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "94dfe06c-3ba8-4092-a3f8-ae2b8bfa6a7d",
+		"name": "AlgoTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"baba@mailinator.com\",\r\n    \"password\":\"Baba@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "bceae7c0-8db3-4784-889c-216deef0b535",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":\"Laptop\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/searchProduct",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "1b5397aa-01c5-4426-9f46-113b20c1980a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"product\": {\r\n                \"productId\": 1,\r\n                \"name\": \"Lenovo Thinkpad\",\r\n                \"type\": \"Laptop\",\r\n                \"category\": \"Electronics\",\r\n                \"brand\": \"Lenovo\",\r\n                \"price\": 45000.0,\r\n                \"seller_id\": 2\r\n            },\r\n            \"specification\": {\r\n                \"screen\": \"1020 X 768\",\r\n                \"ram\": \"2 GB\"\r\n            }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/addProduct",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080"
+		}
+	]
+}
